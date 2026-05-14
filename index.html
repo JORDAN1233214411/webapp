@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Glowing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-blue-green">
+    <div class="container">
+        <div class="header">
+            <h1 class="title">✨ Glowing Calculator</h1>
+            <button class="settings-btn" id="settingsBtn">⚙️</button>
+        </div>
+
+        <div class="calculator">
+            <div class="display-container">
+                <div id="previousOperand" class="previous-operand"></div>
+                <div id="currentOperand">0</div>
+            </div>
+
+            <div id="buttonGrid"></div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-content">
+            <div class="settings-title">
+                <span>⚙️ Settings</span>
+                <button class="close-btn" id="closeSettings">&times;</button>
+            </div>
+
+            <!-- Scientific Mode -->
+            <div class="settings-group">
+                <label class="settings-label">
+                    Scientific Mode
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="scientificMode">
+                        <span class="slider"></span>
+                    </label>
+                </label>
+            </div>
+
+            <!-- Theme Selection -->
+            <div class="settings-group">
+                <label class="settings-label">Theme</label>
+                <div class="theme-options">
+                    <div class="theme-option" data-theme="blue-green">💚💙 Blue & Green</div>
+                    <div class="theme-option" data-theme="purple-cyan">💜🔷 Purple & Cyan</div>
+                    <div class="theme-option" data-theme="red-orange">❤️🧡 Red & Orange</div>
+                    <div class="theme-option" data-theme="pink-yellow">💛💖 Pink & Yellow</div>
+                </div>
+            </div>
+
+            <!-- Glow Intensity -->
+            <div class="settings-group">
+                <label class="settings-label">
+                    Glow Intensity
+                    <span class="value-display" id="glowValue">100</span>
+                </label>
+                <input type="range" id="glowIntensity" min="0" max="100" value="100">
+            </div>
+
+            <!-- Brightness -->
+            <div class="settings-group">
+                <label class="settings-label">
+                    Brightness
+                    <span class="value-display" id="brightnessValue">100</span>
+                </label>
+                <input type="range" id="brightness" min="50" max="150" value="100">
+            </div>
+
+            <!-- Decimal Places -->
+            <div class="settings-group">
+                <label class="settings-label">Decimal Places</label>
+                <select id="decimalPlaces">
+                    <option value="all">All (no rounding)</option>
+                    <option value="2">2 decimal places</option>
+                    <option value="3">3 decimal places</option>
+                    <option value="4">4 decimal places</option>
+                    <option value="5">5 decimal places</option>
+                    <option value="6">6 decimal places</option>
+                    <option value="10">10 decimal places</option>
+                </select>
+            </div>
+
+            <!-- Font Size -->
+            <div class="settings-group">
+                <label class="settings-label">
+                    Display Font Size
+                    <span class="value-display" id="fontSizeValue">36</span>px
+                </label>
+                <input type="range" id="fontSize" min="20" max="60" value="36">
+            </div>
+
+            <!-- Button Sound -->
+            <div class="settings-group">
+                <label class="settings-label">
+                    Button Click Sound
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="buttonSound" checked>
+                        <span class="slider"></span>
+                    </label>
+                </label>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="button-group">
+                <button id="resetBtn">🔄 Reset to Defaults</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
